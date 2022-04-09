@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myFunction(param) {
+            param("Học lập trình")
+        }
+
+        function myCallback(value) {
+            console.log("value: ", value);
+        }
+
+        myFunction(myCallback)
+            //another callback
+        function myFunction2(value) {
+            value(value, 2 * 2)
+        }
+
+        function myCallback2(value2) {
+            console.log(3 * 3);
+        }
+        myFunction2(myCallback2);
+        //
+        function myFunction3(value3) {
+            value3("Nguyễn Hữu")
+        }
+
+        function myCallback3(param2) {
+            console.log(param2, "Việt Anh");
+        }
+        myFunction3(myCallback3)
+            //another
+        function myDisplay(show) {
+            console.log(show);
+        }
+
+        function myCalculator(a, b, mycb) {
+            let sum = a * b
+            mycb(sum)
+        }
+        myCalculator(5, 5, myDisplay)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Array.prototype.filter2 = function(callback) {
+            var output = [] //tạo một mảng rỗng
+            for (const index in this) {
+                if (this.hasOwnProperty(index)) {
+                    var result = callback(this[index], index, this); //phần tử hiện tại,index,và mảng 
+                    if (result) {
+                        output.push(this[index])
+                    }
+                }
+            }
+            return output
+        }
+
+        const course = [{
+                name: "HTML",
+                coin: 300,
+            },
+
+            {
+                name: "CSS",
+                coin: 600,
+            },
+
+            {
+                name: "Javascript",
+                coin: 300,
+            }, {
+                name: "PHP",
+                coin: 900
+            }
+        ]
+
+        var result = course.filter2(function(course, index, array) {
+            return course.coin > 300
+        })
+        console.log(result);
+    </script>
+</body>
+
+</html>

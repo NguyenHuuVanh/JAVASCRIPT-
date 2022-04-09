@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="h2"></h2>
+    <script>
+        const person = {
+            fullName: function(arg1) {
+                return this.firstName + " " + this.lastName + " " + arg1
+            }
+        }
+        const person1 = {
+            firstName: "Nguyễn Hữu",
+            lastName: "Việt Anh"
+        }
+        const person2 = {
+            firstName: "Nguyễn Hữu",
+            lastName: "Việt Anh"
+        }
+        console.log(person.fullName.apply(person1, ["haha"]));
+        //h2
+        var fruits = [
+            "apple", "banana", "táo", "Xoài"
+        ];
+        var html = fruits.map(function(fruits) {
+            console.log(`<h2>${fruits}</h2>`);
+        })
+        document.getElementById('h2').innerHTML = html
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let text = "";
+        let i = 0;
+        while (i < 10) {
+            text += "The number is " + i + " ";
+            i++;
+        }
+        console.log(text);
+        //do while
+        console.log("Do while");
+        let txt = "";
+        let x = 0;
+        do {
+            txt += "The number is " + x + " ";
+            ++x;
+        } while (x < 10);
+        console.log(txt);
+        //vd khác
+        const myString = ["Nguyễn", "Hữu", "Việt", " Anh"];
+        let string = "";
+        let k = 0;
+        while (myString[k]) {
+            string += myString[k] + " ";
+            k++;
+        }
+        console.log(string);
+    </script>
+</body>
+
+</html>

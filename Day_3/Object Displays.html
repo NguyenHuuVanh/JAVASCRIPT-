@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: "Nguyễn Hữu",
+            age: 19,
+            lastName: "Việt Anh",
+            language: "NO",
+            set lang(values) {
+                this.language = values;
+            },
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            },
+        };
+        person.lang = "en";
+        const myArray = Object.values(person);
+        const myArrayString = JSON.stringify(person);
+        console.log(myArray);
+        console.log(myArrayString);
+        console.log(person.language);
+        console.log(person.fullName);
+    </script>
+</body>
+
+</html>

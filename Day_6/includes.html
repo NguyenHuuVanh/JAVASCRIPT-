@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./includes.js"></script>
+</head>
+
+<body>
+    <script>
+        console.log(String.prototype.includes);
+        var string = 'Hello các bạn nhó!'
+        console.log(string.includes('Hello'));
+        //find max
+        let max = -Infinity
+        const myArray = [10, 20, 111, -6, 24, 44, 56, 90]
+        for (let i = 0; i < myArray.length; i++) {
+            if (max < myArray[i]) {
+                max = myArray[i]
+            }
+        }
+        console.log(max);
+    </script>
+</body>
+
+</html>

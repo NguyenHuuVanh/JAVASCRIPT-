@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const d = new Date("2022-03-20");
+        //tạo đôi tượng Date với đầy đủ ngày tháng năm
+        console.log(d);
+        const d1 = new Date("2022-03");
+        //tạo đôi tượng Date với đầy đủ ngày tháng năm
+        console.log(d1);
+        //không có ngày thì nó sẽ hiện thì trong khoảng
+        const d2 = new Date("2022");
+        //tạo đôi tượng Date với đầy đủ ngày tháng năm
+        console.log(d2);
+        //không có ngày tháng thì nó sẽ hiện thì trong khoảng đầu năm đến cuối năm
+        const d3 = new Date("2022-03-20T17:05:00Z");
+        console.log(d3);
+        const d4 = new Date("march 2022 20");
+        console.log(d4);
+        let milisecond = Date.parse("2022-03-20");
+        console.log(
+            "Số mili giây của 2022 năm 3 tháng 20 ngày là " +
+            milisecond +
+            " mili giây"
+        );
+        const conver = new Date(milisecond);
+        console.log(conver);
+    </script>
+</body>
+
+</html>

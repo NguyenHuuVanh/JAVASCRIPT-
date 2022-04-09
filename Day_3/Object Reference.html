@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: "Nguyễn Hữu",
+            lasName: "Việt Anh",
+            language: "VietNam",
+        };
+        Object.defineProperty(person, "language", {
+            language: "English",
+        });
+        console.log(person.language);
+        // Object constructor
+        function Person(first, last, language) {
+            this.firstName = first;
+            this.lastName = last;
+            this.language = language;
+        }
+        let myMom = new Person("Đinh Thị", "Hằng", "Việt Nam");
+        console.log(myMom.firstName + " " + myMom.lastName);
+        //thay đổi một thuộc tính
+        Object.defineProperty(Person, "firstName", {
+            firstName: "Tên mới",
+        });
+        console.log(myMom.firstName);
+        //=> không thể thay đổi thuộc tính của một Object constructor
+        Object.defineProperty(person, "language", {
+            enumerable: false,
+        });
+        console.log(Object.getOwnPropertyNames(person));
+        console.log(Object.keys(person));
+        Object.defineProperties(person, {
+            firstName: {
+                value: "Tên đã được thay đổi",
+            },
+        });
+        console.log(person.firstName);
+    </script>
+</body>
+
+</html>

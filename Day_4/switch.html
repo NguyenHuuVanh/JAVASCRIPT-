@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thusday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 7:
+                day = "Saturday";
+                break;
+
+            default:
+                day = "No have day invilable!";
+                break;
+        }
+        console.log("To day is " + day);
+        let string = "hello";
+        switch (string) {
+            case "hello":
+                console.log("Đúng");
+                break;
+            case "apple":
+                console.log("Không đúng!");
+                break;
+            case "banana":
+                console.log("Không đúng");
+                break;
+            default:
+                break;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Array.prototype.some2 = function(callback) {
+            var newArray = []
+            for (const index in this) {
+                if (this.hasOwnProperty(index)) {
+                    if (callback(this[index], index, this)) {
+                        newArray.push(this[index])
+                        console.log(newArray);
+                        return true
+                    };
+                }
+            }
+            return false
+        }
+        const course = [{
+                name: "HTML",
+                coin: 300,
+                isFinish: false
+            },
+
+            {
+                name: "CSS",
+                coin: 600,
+                isFinish: false
+            },
+
+            {
+                name: "Javascript",
+                coin: 300,
+                isFinish: false
+            }, {
+                name: "PHP",
+                coin: 900,
+                isFinish: true
+            }
+        ]
+
+        var result = course.some2(function(course, index, array) {
+            return course.isFinish === true
+        })
+        console.log(result);
+    </script>
+</body>
+
+</html>

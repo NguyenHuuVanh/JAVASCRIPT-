@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        const numbers2 = [1, 2, 3, 4, 5];
+        const numbers3 = ["Toán", "Lý", "Hoá", "Văn", "Anh"];
+        numbers3.push("Sinh");
+        console.log(numbers);
+        console.log(numbers3);
+        console.log(numbers.length - 1);
+        let text = "<ul>";
+        for (let index = 0; index < numbers2.length; index++) {
+            text += "<li>" + numbers2[index] + "<li>";
+        }
+        text += "<ul>";
+        document.getElementById("demo").innerHTML = text;
+        // phương thức forEach()
+        let text2 = "<ul>";
+        numbers3.forEach(myFunction);
+        text2 += "</ul>";
+        document.getElementById("demo2").innerHTML = text2;
+
+        function myFunction(value) {
+            text2 += "<li>" + value + "</li>";
+        }
+    </script>
+</body>
+
+</html>

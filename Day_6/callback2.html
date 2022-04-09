@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //////////////// ForEach2 //////////////////////
+        var numbers = [1, 2, 3, 4, 5, 6]
+        Array.prototype.forEach2 = function(callback, index, arrayOrgin) {
+            let length = numbers.length
+            for (let i = 0; i < length; i++) {
+                callback(this[i], i, this)
+            }
+        }
+        var sum = numbers.forEach2(function(numbers, index, value) {
+                console.log(numbers, index, value);
+            })
+            //////////////// Find2 //////////////////////
+        var fruits = [
+            "apple", "banana", "xoài", "bưởi", "lê"
+        ]
+        Array.prototype.Find2 = function(callback, index, arrayOrgin2) {
+            let length = numbers.length
+            for (let i = 0; i < length; i++) {
+                callback(this[i], i, this)
+                return this[i]
+            }
+        }
+        var find = fruits.Find2(function(fruits, index, value) {
+            console.log(fruits, index, value);
+            var result = index === "xoài"
+            console.log(result);
+        })
+
+        // Thử tạo hàm reduce2
+        var courses = [{
+            id: 1,
+            name: 'Toán',
+            price: 200
+        }, {
+            id: 2,
+            name: 'Văn',
+            price: 100
+        }, {
+            id: 3,
+            name: 'Anh',
+            price: 700
+        }, {
+            id: 4,
+            name: 'Lý',
+            price: 400
+        }, {
+            id: 5,
+            name: 'Sinh',
+            price: 900
+        }]
+
+        Object.prototype.reduce2 = function(callBack) {
+            var myResult = 0
+            var i = 0
+            if (arguments.length >= 2) myResult = arguments[1]
+            for (; i < this.length; i++) {
+                callBack((myResult += this[i].price), this[i], i, this)
+            }
+        }
+
+        var myScreen = courses.reduce2(function(total, currentValue, i, courses) {
+                console.log(total, currentValue.price, i, courses)
+            }, 100)
+            // 100 là tham số truyền vào, bạn có thể xóa nó đi
+    </script>
+</body>
+
+</html>

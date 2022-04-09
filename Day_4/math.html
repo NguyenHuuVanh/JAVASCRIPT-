@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="document.getElementById('demo').innerHTML=getRndInteger(0,10)">
+      Click random
+    </button>
+    <p id="demo"></p>
+    <script>
+        //Các hằng số học trong js
+        console.log("Giá trị của số e là " + Math.E);
+        console.log("Giá trị của số Pi là " + Math.PI);
+        console.log("Giá trị của số căn 2 là " + Math.SQRT2);
+        console.log("Giá trị của số căn 1/2 là " + Math.SQRT1_2);
+        console.log("Giá trị của số căn ln2 là " + Math.LN2);
+        console.log("Giá trị của số căn ln10 là " + Math.LN10);
+        console.log("Giá trị của số căn log(2)e là " + Math.LOG2E);
+        console.log("Giá trị của số căn log(e) là " + Math.LOG10E);
+        //math methods
+        console.log(Math.round(4.4));
+        console.log(Math.ceil(4.3));
+        console.log(Math.floor(4.5));
+        console.log(Math.trunc(4.9999));
+        console.log(Math.sign(4.9999));
+        console.log(Math.pow(4, 2));
+        console.log(Math.sqrt(100));
+        console.log(Math.sin((45 * Math.PI) / 180));
+        console.log(Math.min(100, 22, 44, -32, 18, 99, 100));
+        console.log(Math.max(100, 22, 44, -32, 18, 99, 100));
+        // console.log(
+        //     setInterval(function() {
+        //         console.log(Math.random()), 1000;
+        //     })
+        // );
+        console.log(Math.log(10));
+        console.log(Math.log2(8));
+        console.log(Math.log10(100));
+        //math random
+        console.log(Math.ceil(Math.random() * 100));
+        let random = Math.ceil(Math.random() * 100);
+        if (random <= 15) {
+            console.log("Cường hoá thành công!");
+        }
+        console.log(Math.floor(4.99));
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+    </script>
+</body>
+
+</html>

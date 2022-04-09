@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.ChangeName = function(name) {
+                this.lastName = name;
+            };
+        }
+        const myMom = new person("Đinh Thị", "Hằng", 44, "black");
+        myMom.nationalty = "Việt Nam";
+        myMom.name = function() {
+            return this.firstName + " " + this.lastName;
+        };
+        myMom.ChangeName = "Tên cuối";
+        console.log(myMom.firstName + myMom.lastName);
+        console.log(myMom.nationalty);
+        console.log(myMom.name());
+        console.log(myMom.ChangeName);
+    </script>
+</body>
+
+</html>

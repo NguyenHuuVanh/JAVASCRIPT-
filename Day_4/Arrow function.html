@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Click me!</button>
+    <div id="demo"></div>
+    <script>
+        let myFunction = (a, b) => a * b;
+        console.log(myFunction(4, 5));
+        // Hello world
+        var hello;
+
+        hello = () => {
+            return "Hello World!";
+        };
+        console.log(hello());
+        //Hàm có tham số
+        var sum = (a, b) => a - b;
+        console.log(sum(10, 10));
+        var length = (parament) => "Chuỗi   " + parament;
+        console.log(length("nhị phân"));
+        //this
+        var hellolLength = function() {
+            document.getElementById("demo").innerHTML += this;
+        };
+        window.addEventListener("load", hellolLength);
+        document.getElementById("btn").addEventListener("click", hellolLength);
+
+        var obj = {
+            count: 10,
+            doSomethingLater: function() {
+                // The traditional function binds "this" to the "obj" context.
+                setTimeout(() => {
+                    // Since the arrow function doesn't have its own binding and
+                    // setTimeout (as a function call) doesn't create a binding
+                    // itself, the "obj" context of the traditional function will
+                    // be used within.
+                    this.count++;
+                    console.log(this.count);
+                }, 300);
+            },
+        };
+
+        obj.doSomethingLater();
+    </script>
+</body>
+
+</html>

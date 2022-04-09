@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array map</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        const numbers = [45, 12, 21, 22, 34, 68];
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = txt;
+
+        function myFunction(value, index, array) {
+            txt += value + "<br>";
+        }
+        // array map
+        const numbers1 = numbers.map(myFunction1);
+        document.getElementById("demo1").innerHTML = numbers1;
+
+        function myFunction1(value, index, array) {
+            return value * 2;
+        }
+        // array filter
+        const over18 = numbers.filter(myFunction2);
+        document.getElementById("demo2").innerHTML = over18;
+
+        function myFunction2(value, index, array) {
+            return value > 18;
+        }
+        //reduce array
+        let sum = numbers.reduce(myFunction3);
+        document.getElementById("demo3").innerHTML = "The sum is " + sum;
+
+        function myFunction3(total, value, index, array) {
+            return total + value;
+        } // every array
+        let overlarge18 = numbers.every(myFunction4);
+        document.getElementById("demo4").innerHTML =
+            "The sum large 18 is " + overlarge18;
+
+        function myFunction4(value, index, array) {
+            return value > 18;
+        }
+        // some arrray
+        let someOver18 = numbers.some(myFunction5);
+        document.getElementById("demo5").innerHTML = "The sum is " + someOver18;
+
+        function myFunction5(value, index, array) {
+            return value > 18;
+        }
+    </script>
+</body>
+
+</html>

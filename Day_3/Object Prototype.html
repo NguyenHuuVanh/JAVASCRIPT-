@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(first, last, age, eyeColor) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eyeColor;
+        }
+        const myMom = new Person("Đinh Thị", "Hằng", 45, "Black");
+        Person.prototype.nationality = "Việt Nam";
+        console.log(
+            myMom.firstName + " " + myMom.lastName + " " + myMom.nationality
+        );
+        Person.prototype.height = function() {
+            return (this.height = 178);
+        };
+        console.log(myMom);
+        console.log(myMom.height());
+        let txt = 0;
+        for (let index = 0; index < 10; index++) {
+            txt += 10;
+            console.log("Giá trị thứ " + index + " là " + txt);
+        }
+    </script>
+</body>
+
+</html>

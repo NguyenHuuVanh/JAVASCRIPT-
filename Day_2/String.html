@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String method</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>string method in Javascript</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button onclick="myFunction()" type="button">try it</button>
+    <p id="replace">This is ABC and DEF</p>
+    <p id="uppcase">xin chào các bạn</p>
+    <p id="lowercase">XIN CHÀO CÁC BẠN</p>
+    <p id="concat"></p>
+    <p id="trim"></p>
+    <p id="trim2"></p>
+    <p id="padding"></p>
+    <p id="charAt"></p>
+    <p id="charCodeAt"></p>
+    <p id="split"></p>
+    <p id="findIndex"></p>
+    <p id="search"></p>
+    <p id="lastIndex"></p>
+    <p id="match"></p>
+    <script>
+        /* extracting string parts(cắt chuỗi)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      có 3 phương pháp cắt chuỗi:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       1.slice()
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      2.substring()
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      3.substr()
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */
+
+        let text1 = "Nguyễn Hữu Việt Anh";
+        let text2 = "Nguyễn Hữu Việt Anh";
+        let text3 = "Nguyễn Hữu Việt Anh";
+        let text4 = document.getElementById("uppcase").innerHTML;
+        let text5 = document.getElementById("lowercase").innerHTML;
+        let text6 = "     ABC   ";
+        let text7 = text6.trim();
+        let text8 = "5";
+        let text9 = "abcdef";
+        let text10 =
+            "Nguyễn Hữu Việt Anh Nguyễn Hữu Việt Anh Nguyễn Hữu Việt Anh";
+        const myArray = text9.split("");
+
+        function myFunction() {
+            let text = document.getElementById("replace").innerHTML;
+            document.getElementById("replace").innerHTML = text.replace(
+                "ABC",
+                "DEF"
+            );
+        }
+        document.getElementById("demo1").innerHTML = text1.slice(0, 7);
+        document.getElementById("demo2").innerHTML = text2.substring(4, 7); //không nhận giá trị âm
+        document.getElementById("demo3").innerHTML = text3.substr(0, 6);
+        document.getElementById("uppcase").innerHTML = text4.toUpperCase();
+        document.getElementById("lowercase").innerHTML = text4.toLowerCase();
+        document.getElementById("concat").innerHTML = text1.concat(" ", text2);
+        document.getElementById("trim").innerHTML =
+            "before trim:" + text6.length + "<br>after trim: " + text7.length;
+        document.getElementById("padding").innerHTML = text8.padStart(4, 0);
+        document.getElementById("charAt").innerHTML = text1.charAt(0);
+        document.getElementById("charCodeAt").innerHTML = text1.charCodeAt(0);
+        document.getElementById("split").innerHTML = myArray;
+        document.getElementById("findIndex").innerHTML = text1.indexOf("u", 3);
+        document.getElementById("search").innerHTML = text1.search("u");
+        document.getElementById("lastIndex").innerHTML = text1.lastIndexOf("u");
+        document.getElementById("match").innerHTML = text10.match(/uy/g);
+    </script>
+</body>
+
+</html>

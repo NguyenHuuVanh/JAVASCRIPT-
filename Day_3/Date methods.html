@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const d = new Date();
+        console.log(d.getFullYear());
+        console.log(d.getMonth() + 1);
+        console.log(d.getDate());
+        console.log(
+            `Hôm nay là ngày ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`
+        );
+        console.log(
+            `Hiện tại là ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}:${d.getMilliseconds()}`
+        );
+        console.log(d.getTime());
+        console.log(d.getDay()); //do chủ nhật nên giá trị là 0
+        console.log(Date.now());
+        //UTC
+        console.log(d.getUTCFullYear());
+        //cài đặt(set())
+        const time = new Date();
+        time.setFullYear(2022, 03, 21);
+        console.log("----------- Set -------------- ");
+        console.log(time);
+        console.log(time.toDateString());
+        console.log(time.toLocaleDateString());
+        console.log(time.toJSON());
+        console.log(time.toLocaleTimeString());
+        console.log(time.toTimeString());
+        console.log(time.valueOf());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //for
+        for (let i = 0; i < 100; i++) {
+            console.log(i);
+        }
+        const fruits = ["apple", "banana", "táo", "lê", "cam", "xoài"];
+        for (let index = 0; index < fruits.length; index++) {
+            console.log(fruits[index]);
+        }
+        //forEach
+        const numbers = [10, 12, 32, 33, 1, 9];
+        let txt = "";
+        numbers.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+            txt += value + " ";
+        }
+        console.log(txt);
+        //for in
+        var myString = "Nguyễn Hữu Việt Anh";
+        for (let i in myString) {
+            console.log(i);
+        }
+        //for of không dùng được với object
+        const apple = ["apple", "banana", "táo"];
+        let text = "";
+        //for of
+        for (let i of apple) {
+            text += i + " ";
+        }
+        console.log(text);
+        //trừ khi chuyển đổi nó
+        const person = {
+            fname: "Nguyễn Hữu",
+            lname: "Việt Anh",
+            age: 18,
+        };
+        let text1 = "";
+        for (let i of Object.keys(person)) {
+            text1 += person[i] + " ";
+        }
+        console.log(text1);
+        //the different for in and for of
+        var arr = [3, 5, 7];
+        arr.foo = "hello";
+
+        for (var i in arr) {
+            console.log(i); // logs "0", "1", "2", "foo"
+        }
+
+        for (var i of arr) {
+            console.log(i); // logs "3", "5", "7"
+            // it doesn't log "3", "5", "7", "hello"
+        }
+    </script>
+</body>
+
+</html>

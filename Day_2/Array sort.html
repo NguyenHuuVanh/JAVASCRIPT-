@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array sort</title>
+</head>
+
+<body>
+    <script>
+        const text = ["a", "f", "c", "d"];
+        let numbers = [100, 25, 31, 12, 8];
+        //before sort
+        console.log(text.sort());
+        console.log(text.reverse());
+        console.log(numbers);
+        console.log(
+            numbers.sort(function(a, b) {
+                return a - b;
+            })
+        );
+        console.log("Giá trị bé nhất của mảng là:", numbers[0]);
+        //Hàm random
+        console.log(
+            numbers.sort(function(a, b) {
+                return 0.5 - Math.random();
+            })
+        );
+        //tìm max của mảng
+        let arrayNumbers = [100, 33, 45, 68, 22, 19, 0];
+
+        function findMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+        console.log(findMax(arrayNumbers));
+
+        function findMin(arr) {
+            return Math.min.apply(null, arr);
+        }
+        console.log(findMin(arrayNumbers));
+        //Dùng phương pháp lặp
+        function loopArray(arr) {
+            let len = arr.length;
+            let max = -Infinity;
+            while (len--) {
+                if (arr[len] > max) {
+                    max = arr[len];
+                }
+            }
+            return max; //tương tự với tìm min
+        }
+        console.log(loopArray(arrayNumbers));
+        //sắp xếp object trong mảng
+        const arrayObject = [{
+            type: "red",
+            numbers: 2,
+        }, {
+            type: "blue",
+            numbers: 1,
+        }, {
+            type: "green",
+            numbers: 0,
+        }, ];
+        console.log(arrayObject);
+        console.log(
+            arrayObject.sort(function(a, b) {
+                return a.numbers - b.numbers;
+            })
+        );
+    </script>
+</body>
+
+</html>

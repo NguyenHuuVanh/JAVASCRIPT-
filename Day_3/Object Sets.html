@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numbers = new Set([1, 2, 3, 4, 5]);
+        numbers.add(6);
+        numbers.delete(6);
+        console.log(numbers.size);
+        console.log(numbers.has(5, 1));
+        // console.log(numbers.clear());
+        let txt = "";
+        numbers.forEach(function(value) {
+            txt += value + " ";
+        });
+        console.log(txt);
+        let txt1 = "";
+        for (const i of numbers.keys()) {
+            txt1 += i + " ";
+        }
+        console.log(txt1);
+        let txt2 = "";
+        for (let i of numbers.entries()) {
+            txt2 += i + " ";
+        }
+        console.log(txt2);
+    </script>
+</body>
+
+</html>

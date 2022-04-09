@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf483bebf6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik Wet Paint', cursive;
+        }
+        
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient( to right bottom, #22c1c3, #fdbb2d);
+        }
+        /* h1 */
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 16px;
+            font-size: 80px;
+            border: 5px dotted #ecf0f1;
+            position: relative;
+        }
+        
+        #settime {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 80vh;
+            position: absolute;
+            overflow: hidden;
+            color: white;
+            font-size: 80px;
+            border: 3px solid #bdc3c7;
+        }
+        
+        i.fa-solid.fa-clock {
+            overflow: hidden;
+            display: inline-block;
+            position: absolute;
+            font-size: 80px;
+            color: white;
+            margin-top: 35vh;
+            transform: translate(520px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>GIỜ HIỆN TẠI</h1>
+    <i class="fa-solid fa-clock"></i>
+    <div id="settime"></div>
+    <script>
+        function time() {
+            var time = new Date();
+            document.getElementById('settime').innerHTML =
+                time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+        }
+        setInterval(time, 1000)
+    </script>
+</body>
+
+</html>

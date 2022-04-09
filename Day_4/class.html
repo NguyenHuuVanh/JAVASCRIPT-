@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        let myCar = new Car("Toyota", 2002);
+        console.log(
+            "My car is " + myCar.age() + " Year old and it name " + myCar.name
+        );
+        //Hiện thị phân số
+        class PhanSo {
+            constructor(Tu1, Mau1, Tu2, Mau2) {
+                this.Tu1 = Tu1;
+                this.Mau1 = Mau1;
+                this.Tu2 = Tu2;
+                this.Mau2 = Mau2;
+            }
+            sum() {
+                return Math.floor(
+                    (this.Tu1 * this.Mau2 + this.Mau1 * this.Tu2) /
+                    (this.Mau1 * this.Mau2)
+                );
+            }
+            sub() {
+                return (
+                    (this.Tu1 * this.Mau2 - this.Mau1 * this.Tu2) /
+                    (this.Mau1 * this.Mau2)
+                );
+            }
+            add() {
+                return (this.Tu1 * this.Tu2) / (this.Mau1 * this.Mau2);
+            }
+            divi() {
+                return (this.Tu1 * this.Mau2) / (this.Mau2 * this.Tu2);
+            }
+        }
+        let myPhanSo = new PhanSo(25, 9, 20, 2);
+        console.log(
+            " result :sum : " +
+            myPhanSo.sum() +
+            " |" +
+            " result :sub : " +
+            myPhanSo.sub() +
+            " |" +
+            " result :add : " +
+            myPhanSo.add() +
+            " |" +
+            " result :divi : " +
+            myPhanSo.divi()
+        );
+    </script>
+</body>
+
+</html>

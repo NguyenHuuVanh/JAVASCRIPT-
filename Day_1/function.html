@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+    <script>
+        function showDialog() {
+            alert("Hàm không tham số sẽ hoạt động khi được gọi!");
+        }
+
+        function writeLog() {
+            var myString = "";
+            for (var param of arguments) {
+                myString += `${param} - `;
+            }
+            console.log(myString);
+        }
+
+        function string(a, b) {
+            return a.toString() + b.toString();
+        }
+        writeLog(1, 2, 3, 4, 5, 6, 7, 8, 9, "--");
+        showDialog();
+        console.log(string(123, 456));
+    </script>
+</head>
+
+<body>
+    <div id="demo"></div>
+</body>
+
+</html>

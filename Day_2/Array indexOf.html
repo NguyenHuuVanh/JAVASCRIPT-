@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array indexOf</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ["apple", "orange", "banana", "xoài"];
+
+        const numbers = [1, 2, 3, 4, 5];
+        let text = Array.from("Xin chào các bạn");
+
+        let index = fruits.indexOf("apple");
+        console.log("vị trí của phần tử apple là " + index);
+        //findIndex
+
+        function myFind(value, index, array) {
+            return value > 2;
+        }
+        console.log("vị trí của phần tử banana là " + numbers.findIndex(myFind));
+        console.log(text);
+        console.log(fruits.includes("apple"));
+    </script>
+</body>
+
+</html>
